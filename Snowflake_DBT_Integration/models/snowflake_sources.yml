@@ -6,6 +6,10 @@ sources:
     schema: TPCDS_SF100TCL
     tables:
       - name: CALL_CENTER
+        columns:
+          - name: CC_REC_START_DATE
+            data_tests: 
+              - unique
       - name: CATALOG_RETURNS
       - name: TIME_DIM
       - name: WEB_PAGE

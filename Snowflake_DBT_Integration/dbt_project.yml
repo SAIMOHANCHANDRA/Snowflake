@@ -16,4 +16,4 @@ snapshot-paths:
   - snapshots
 models:
   Snowflake_DBT_Integration:
-    +materialized: view
+    +materialized: table

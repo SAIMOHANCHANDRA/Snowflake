@@ -1,0 +1,1 @@
+SELECT * FROM {{ref('CALL_CENTER')}}
