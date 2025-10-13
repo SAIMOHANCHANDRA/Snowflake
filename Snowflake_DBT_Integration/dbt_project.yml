@@ -1,0 +1,19 @@
+name: Snowflake_DBT_Integration
+version: 1.0.0
+config-version: 2
+profile: Snowflake_DBT_Integration
+model-paths:
+  - models
+analysis-paths:
+  - analyses
+test-paths:
+  - tests
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+snapshot-paths:
+  - snapshots
+models:
+  Snowflake_DBT_Integration:
+    +materialized: view

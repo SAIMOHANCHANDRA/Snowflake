@@ -1,0 +1,11 @@
+Snowflake_DBT_Integration:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: SYSADMIN
+      warehouse: COMPUTE_WH
+      database: MAIN
+      schema: STAGING
+      account: ' '
+      user: ' '
