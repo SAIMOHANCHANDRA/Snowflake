@@ -1,0 +1,30 @@
+version: 2
+sources:
+  - name: source
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCDS_SF100TCL
+    tables:
+      - name: CALL_CENTER
+      - name: CATALOG_RETURNS
+      - name: TIME_DIM
+      - name: WEB_PAGE
+      - name: WEB_SITE
+      - name: HOUSEHOLD_DEMOGRAPHICS
+      - name: WEB_SALES
+      - name: CATALOG_SALES
+      - name: CUSTOMER_DEMOGRAPHICS
+      - name: PROMOTION
+      - name: STORE_SALES
+      - name: SHIP_MODE
+      - name: WEB_RETURNS
+      - name: STORE_RETURNS
+      - name: CUSTOMER_ADDRESS
+      - name: DATE_DIM
+      - name: REASON
+      - name: INCOME_BAND
+      - name: CATALOG_PAGE
+      - name: CUSTOMER
+      - name: INVENTORY
+      - name: ITEM
+      - name: STORE
+      - name: WAREHOUSE
