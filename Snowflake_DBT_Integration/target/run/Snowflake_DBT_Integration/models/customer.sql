@@ -1,0 +1,16 @@
+
+  
+    
+
+        create or replace transient table MAIN.STAGING.customer
+         as
+        (WITH CTE AS
+(
+    SELECT *, ROW_NUMBER() OVER(PARTITION BY CUSTOMERID ORDER BY UPDATED_AT DESC) AS Row_Number
+    FROM Practice.default.customer_history
+)
+
+SELECT CUSTOMERID, NAME, Row_Number,UPDATED_AT FROM CTE WHERE Row_Number=1
+        );
+      
+  

@@ -33,3 +33,10 @@ sources:
       - name: ITEM
       - name: STORE
       - name: WAREHOUSE
+
+
+  - name : source1
+    database: Practice
+    schema: default
+    tables:
+      - name : customer_history

@@ -1,0 +1,10 @@
+snapshots:
+  - name: snapshot1
+    relation: ref('customer')
+    config:
+      database: MAIN
+      schema: Staging
+      unique_key: CUSTOMERID
+      strategy: timestamp
+      updated_at: UPDATED_AT
+      dbt_valid_to_current: "to_date('9999-12-31')"
