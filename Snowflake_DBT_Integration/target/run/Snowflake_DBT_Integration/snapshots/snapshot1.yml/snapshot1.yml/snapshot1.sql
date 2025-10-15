@@ -1,7 +1,7 @@
 
       begin;
-    merge into "MAIN"."STAGING"."SNAPSHOT8" as DBT_INTERNAL_DEST
-    using "MAIN"."STAGING"."SNAPSHOT8__dbt_tmp" as DBT_INTERNAL_SOURCE
+    merge into "MAIN"."STAGING_STAGING"."SNAPSHOT1" as DBT_INTERNAL_DEST
+    using "MAIN"."STAGING_STAGING"."SNAPSHOT1__dbt_tmp" as DBT_INTERNAL_SOURCE
     on DBT_INTERNAL_SOURCE.dbt_scd_id = DBT_INTERNAL_DEST.dbt_scd_id
 
     when matched

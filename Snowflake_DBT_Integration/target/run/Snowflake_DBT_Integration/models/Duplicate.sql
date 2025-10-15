@@ -2,9 +2,9 @@
   
     
 
-        create or replace transient table MAIN.EDW.Duplicate
+        create or replace transient table MAIN.STAGING.Duplicate
          as
-        (SELECT * FROM MAIN.EDW.CALL_CENTER
+        (SELECT * FROM MAIN.STAGING.CALL_CENTER
         );
       
   

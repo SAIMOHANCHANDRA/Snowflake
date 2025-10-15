@@ -1,2 +1,1 @@
-SELECT
-    {{ clean_columns_from_table('TPCDS_SF100TCL', 'ITEM') }}
+select {{ refined_columns_from_table('SNOWFLAKE_SAMPLE_DATA','TPCDS_SF100TCL','ITEM') }}
