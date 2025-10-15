@@ -10203,3 +10203,216 @@ SELECT * FROM SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CALL_CENTER
 [0m23:58:09.514680 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.3819804, "process_in_blocks": "0", "process_kernel_time": 1.09, "process_mem_max_rss": "489096", "process_out_blocks": "0", "process_user_time": 8.12}
 [0m23:58:09.516782 [debug] [Dummy-1   ]: Command `cli run` succeeded at 23:58:09.516404 after 6.38 seconds
 [0m23:58:09.517618 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 00:20:34.124659 | f4c355d9-9610-4420-bf11-62ab7d79cfa5 ==============================
+[0m00:20:34.124659 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m00:20:34.125900 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'debug': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': '/tmp/dbt/target/', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'False'}
+[0m00:20:34.542962 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m00:20:35.855659 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m00:20:36.052484 [info ] [Dummy-1   ]: Unable to do partial parsing because profile has changed
+[0m00:20:38.589727 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m00:20:38.593599 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m00:20:38.663521 [info ] [Dummy-1   ]: Found 3 models, 7 snapshots, 26 sources, 474 macros
+[0m00:20:38.667009 [info ] [Dummy-1   ]: 
+[0m00:20:38.667746 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m00:20:38.668555 [info ] [Dummy-1   ]: 
+[0m00:20:38.670790 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m00:20:38.673993 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_MAIN'
+[0m00:20:38.924810 [debug] [ThreadPool]: Using snowflake connection "list_MAIN"
+[0m00:20:38.925658 [debug] [ThreadPool]: On list_MAIN: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN"} */
+show terse schemas in database MAIN
+    limit 10000
+[0m00:20:38.927374 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:20:39.355784 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.429 seconds
+[0m00:20:39.367318 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MAIN, now list_MAIN_STAGING)
+[0m00:20:39.385915 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING"
+[0m00:20:39.386786 [debug] [ThreadPool]: On list_MAIN_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m00:20:39.387410 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:20:40.563616 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.176 seconds
+[0m00:20:40.570768 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING"
+[0m00:20:40.571551 [debug] [ThreadPool]: On list_MAIN_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING"} */
+show objects in MAIN.STAGING
+    limit 10000
+    
+;
+[0m00:20:40.692678 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 0.119 seconds
+[0m00:20:40.695273 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING"
+[0m00:20:40.697204 [debug] [ThreadPool]: On list_MAIN_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m00:20:40.758902 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.061 seconds
+[0m00:20:40.762331 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MAIN_STAGING, now list_MAIN_STAGING_Staging)
+[0m00:20:40.773678 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_Staging"
+[0m00:20:40.774496 [debug] [ThreadPool]: On list_MAIN_STAGING_Staging: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_Staging"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m00:20:40.775154 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:20:41.202142 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.427 seconds
+[0m00:20:41.205436 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_Staging"
+[0m00:20:41.206161 [debug] [ThreadPool]: On list_MAIN_STAGING_Staging: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_Staging"} */
+show objects in MAIN.STAGING_Staging
+    limit 10000
+    
+;
+[0m00:20:41.294309 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.087 seconds
+[0m00:20:41.297715 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_Staging"
+[0m00:20:41.298334 [debug] [ThreadPool]: On list_MAIN_STAGING_Staging: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_Staging"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m00:20:41.354388 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.054 seconds
+[0m00:20:41.356440 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MAIN_STAGING_Staging, now list_MAIN_STAGING_test)
+[0m00:20:41.363628 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_test"
+[0m00:20:41.364331 [debug] [ThreadPool]: On list_MAIN_STAGING_test: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_test"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m00:20:41.366010 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:20:41.751787 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.386 seconds
+[0m00:20:41.755062 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_test"
+[0m00:20:41.755778 [debug] [ThreadPool]: On list_MAIN_STAGING_test: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_test"} */
+show objects in MAIN.STAGING_test
+    limit 10000
+    
+;
+[0m00:20:41.836492 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.080 seconds
+[0m00:20:41.839604 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_test"
+[0m00:20:41.840257 [debug] [ThreadPool]: On list_MAIN_STAGING_test: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_test"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m00:20:42.070878 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.230 seconds
+[0m00:20:42.074318 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MAIN_STAGING_test, now list_MAIN_STAGING_STAGING)
+[0m00:20:42.083238 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_STAGING"
+[0m00:20:42.085057 [debug] [ThreadPool]: On list_MAIN_STAGING_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_STAGING"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m00:20:42.085818 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:20:42.474641 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.389 seconds
+[0m00:20:42.477910 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_STAGING"
+[0m00:20:42.478729 [debug] [ThreadPool]: On list_MAIN_STAGING_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_STAGING"} */
+show objects in MAIN.STAGING_STAGING
+    limit 10000
+    
+;
+[0m00:20:42.548095 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.069 seconds
+[0m00:20:42.551452 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_STAGING"
+[0m00:20:42.552238 [debug] [ThreadPool]: On list_MAIN_STAGING_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_STAGING"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m00:20:42.605289 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.052 seconds
+[0m00:20:42.608455 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MAIN_STAGING_STAGING, now list_MAIN_STAGING__)
+[0m00:20:42.615829 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING__"
+[0m00:20:42.616660 [debug] [ThreadPool]: On list_MAIN_STAGING__: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING__"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m00:20:42.617291 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:20:43.008834 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.391 seconds
+[0m00:20:43.011854 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING__"
+[0m00:20:43.012516 [debug] [ThreadPool]: On list_MAIN_STAGING__: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING__"} */
+show objects in MAIN.STAGING__
+    limit 10000
+    
+;
+[0m00:20:43.091289 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.078 seconds
+[0m00:20:43.094595 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING__"
+[0m00:20:43.095283 [debug] [ThreadPool]: On list_MAIN_STAGING__: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING__"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m00:20:43.151302 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.054 seconds
+[0m00:20:43.163338 [debug] [Thread-2 (]: Began running node snapshot.Snowflake_DBT_Integration.snapshot8
+[0m00:20:43.164323 [info ] [Thread-2 (]: 1 of 1 START snapshot STAGING.snapshot8 ........................................ [RUN]
+[0m00:20:43.166432 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_MAIN_STAGING__, now snapshot.Snowflake_DBT_Integration.snapshot8)
+[0m00:20:43.167190 [debug] [Thread-2 (]: Began compiling node snapshot.Snowflake_DBT_Integration.snapshot8
+[0m00:20:43.179625 [debug] [Thread-2 (]: Began executing node snapshot.Snowflake_DBT_Integration.snapshot8
+[0m00:20:43.293446 [debug] [Thread-2 (]: Using snowflake connection "snapshot.Snowflake_DBT_Integration.snapshot8"
+[0m00:20:43.294349 [debug] [Thread-2 (]: On snapshot.Snowflake_DBT_Integration.snapshot8: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "node_id": "snapshot.Snowflake_DBT_Integration.snapshot8"} */
+/* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "node_id": "snapshot.Snowflake_DBT_Integration.snapshot8"} */
+select * from (
+        
+    
+
+    select *,
+        md5(coalesce(cast(CUSTOMERID as varchar ), '')
+         || '|' || coalesce(cast(UPDATED_AT as varchar ), '')
+        ) as dbt_scd_id,
+        UPDATED_AT as dbt_updated_at,
+        UPDATED_AT as dbt_valid_from,
+        
+  
+  coalesce(nullif(UPDATED_AT, UPDATED_AT), to_date('9999-12-31'))
+  as dbt_valid_to
+from (
+        select * from MAIN.STAGING.customer
+    ) sbq
+
+
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+[0m00:20:43.295050 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m00:20:43.766205 [debug] [Thread-2 (]: SQL status: SUCCESS 0 in 0.471 seconds
+[0m00:20:43.774878 [debug] [Thread-2 (]: Using snowflake connection "snapshot.Snowflake_DBT_Integration.snapshot8"
+[0m00:20:43.775981 [debug] [Thread-2 (]: On snapshot.Snowflake_DBT_Integration.snapshot8: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "node_id": "snapshot.Snowflake_DBT_Integration.snapshot8"} */
+/* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "node_id": "snapshot.Snowflake_DBT_Integration.snapshot8"} */
+select * from (
+        select to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+[0m00:20:43.860580 [debug] [Thread-2 (]: SQL status: SUCCESS 0 in 0.083 seconds
+[0m00:20:43.862757 [debug] [Thread-2 (]: Writing runtime sql for node "snapshot.Snowflake_DBT_Integration.snapshot8"
+[0m00:20:43.865665 [debug] [Thread-2 (]: Using snowflake connection "snapshot.Snowflake_DBT_Integration.snapshot8"
+[0m00:20:43.866438 [debug] [Thread-2 (]: On snapshot.Snowflake_DBT_Integration.snapshot8: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "node_id": "snapshot.Snowflake_DBT_Integration.snapshot8"} */
+create or replace transient table MAIN.STAGING.snapshot8
+         as
+        (
+    
+
+    select *,
+        md5(coalesce(cast(CUSTOMERID as varchar ), '')
+         || '|' || coalesce(cast(UPDATED_AT as varchar ), '')
+        ) as dbt_scd_id,
+        UPDATED_AT as dbt_updated_at,
+        UPDATED_AT as dbt_valid_from,
+        
+  
+  coalesce(nullif(UPDATED_AT, UPDATED_AT), to_date('9999-12-31'))
+  as dbt_valid_to
+from (
+        select * from MAIN.STAGING.customer
+    ) sbq
+
+
+
+        );
+[0m00:20:44.747306 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.880 seconds
+[0m00:20:44.786987 [info ] [Thread-2 (]: 1 of 1 OK snapshotted STAGING.snapshot8 ........................................ [[32mSUCCESS 1[0m in 1.62s]
+[0m00:20:44.789158 [debug] [Thread-2 (]: Finished running node snapshot.Snowflake_DBT_Integration.snapshot8
+[0m00:20:44.793592 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m00:20:44.794260 [debug] [Dummy-1   ]: Connection 'snapshot.Snowflake_DBT_Integration.snapshot8' was properly closed.
+[0m00:20:44.794868 [info ] [Dummy-1   ]: 
+[0m00:20:44.796778 [info ] [Dummy-1   ]: Finished running 1 snapshot in 0 hours 0 minutes and 6.12 seconds (6.12s).
+[0m00:20:44.797888 [debug] [Dummy-1   ]: Command end result
+[0m00:20:44.836678 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m00:20:44.840212 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m00:20:44.848559 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m00:20:44.850279 [info ] [Dummy-1   ]: 
+[0m00:20:44.851262 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m00:20:44.851966 [info ] [Dummy-1   ]: 
+[0m00:20:44.852655 [info ] [Dummy-1   ]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m00:20:44.856171 [debug] [Dummy-1   ]: Resource report: {"command_name": "snapshot", "command_success": true, "command_wall_clock_time": 10.84565, "process_in_blocks": "0", "process_kernel_time": 1.12, "process_mem_max_rss": "488564", "process_out_blocks": "0", "process_user_time": 9.47}
+[0m00:20:44.858161 [debug] [Dummy-1   ]: Command `cli snapshot` succeeded at 00:20:44.856760 after 10.85 seconds
+[0m00:20:44.858910 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 01:46:01.121664 | 4369f0c2-b1e8-46b2-a09a-68c112bc9c91 ==============================
+[0m01:46:01.121664 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m01:46:01.124073 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m01:46:01.538937 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m01:46:02.836455 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m01:46:03.173924 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m01:46:03.175128 [debug] [Dummy-1   ]: Partial parsing: added file: Snowflake_DBT_Integration://macros/RemovePattern.sql
+[0m01:46:03.540788 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m01:46:03.544698 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m01:46:03.615265 [info ] [Dummy-1   ]: Found 3 models, 7 snapshots, 26 sources, 475 macros
+[0m01:46:03.616830 [warn ] [Dummy-1   ]: The selection criterion 'RemovePattern' does not match any enabled nodes
+[0m01:46:03.619831 [warn ] [Dummy-1   ]: Nothing to do. Try checking your model configs and model specification args
+[0m01:46:03.623261 [debug] [Dummy-1   ]: Command end result
+[0m01:46:03.661284 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m01:46:03.663843 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m01:46:03.669466 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m01:46:03.673123 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.6637547, "process_in_blocks": "0", "process_kernel_time": 1.11, "process_mem_max_rss": "395044", "process_out_blocks": "0", "process_user_time": 6.83}
+[0m01:46:03.674105 [debug] [Dummy-1   ]: Command `cli run` succeeded at 01:46:03.673727 after 2.67 seconds
+[0m01:46:03.674912 [debug] [Dummy-1   ]: Flushing usage events
