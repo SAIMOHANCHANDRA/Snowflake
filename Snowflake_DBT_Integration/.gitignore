@@ -1,2 +1,5 @@
 # Ignore dbt artifacts
 #dbt_modules/
+target/
+logs/
+ 
