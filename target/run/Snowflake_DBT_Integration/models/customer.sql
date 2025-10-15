@@ -2,7 +2,7 @@
   
     
 
-        create or replace transient table MAIN.EDW.customer
+        create or replace transient table MAIN.STAGING.customer
          as
         (WITH CTE AS
 (
