@@ -33,3 +33,9 @@ sources:
       - name: ITEM
       - name: STORE
       - name: WAREHOUSE
+  - name: source2
+    database: MAIN
+    schema: PUBLIC
+    tables:
+        - name: EmployeeDetails
+      

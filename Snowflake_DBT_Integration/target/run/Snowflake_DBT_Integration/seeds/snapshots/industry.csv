@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "MAIN"."STAGING"."INDUSTRY";
+    -- dbt seed --
+    
+            insert into MAIN.STAGING.industry (Industry) values
+            (%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s),(%s)
+        
+
+;
+  

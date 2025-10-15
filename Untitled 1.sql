@@ -1,1 +1,4 @@
-SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA LIKE '%100T%'
+dbt docs generate;
+
+dbt docs serve;
+
