@@ -1,0 +1,1 @@
+SELECT {{compare_table_schemas('PRACTICE', 'PUBLIC', 'EMPLOYEE', 'PRACTICE', 'DEFAULT', 'EMPLOYEE')}}

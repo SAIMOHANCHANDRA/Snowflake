@@ -1,0 +1,1 @@
+SELECT {'target_table': '{{ tgt_db }}.{{ tgt_schema }}.{{ tgt_table }}', 'result': Markup('["{\\"NAME\\":[\\"TEXT\\",\\"ADDED\\"]}"]')}
