@@ -18156,3 +18156,166 @@ invalid identifier 'I_ITEM_SK'
 [0m06:04:10.609307 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 7.5371447, "process_in_blocks": "0", "process_kernel_time": 1.19, "process_mem_max_rss": "486928", "process_out_blocks": "0", "process_user_time": 8.29}
 [0m06:04:10.611377 [debug] [Dummy-1   ]: Command `cli run` failed at 06:04:10.609917 after 7.54 seconds
 [0m06:04:10.612287 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 00:09:03.465815 | 8614714c-225f-4f91-8dc1-0c13e065cc5c ==============================
+[0m00:09:03.465815 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m00:09:03.468176 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'log_format': 'default', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m00:09:03.874882 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m00:09:05.085156 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m00:09:05.433143 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m00:09:05.434295 [debug] [Dummy-1   ]: Partial parsing: updated file: Snowflake_DBT_Integration://models/MacroTest.sql
+[0m00:09:06.160569 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m00:09:06.164163 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m00:09:06.236457 [info ] [Dummy-1   ]: Found 5 models, 8 snapshots, 26 sources, 475 macros
+[0m00:09:06.240130 [info ] [Dummy-1   ]: 
+[0m00:09:06.240966 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m00:09:06.241755 [info ] [Dummy-1   ]: 
+[0m00:09:06.242831 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m00:09:06.246070 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_MAIN'
+[0m00:09:06.468955 [debug] [ThreadPool]: Using snowflake connection "list_MAIN"
+[0m00:09:06.470867 [debug] [ThreadPool]: On list_MAIN: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN"} */
+show terse schemas in database MAIN
+    limit 10000
+[0m00:09:06.471716 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:09:06.868525 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.397 seconds
+[0m00:09:06.880404 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MAIN, now list_MAIN_STAGING_test)
+[0m00:09:06.898575 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_test"
+[0m00:09:06.899419 [debug] [ThreadPool]: On list_MAIN_STAGING_test: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_test"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m00:09:06.900250 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:09:07.264827 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.364 seconds
+[0m00:09:07.271535 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_test"
+[0m00:09:07.272297 [debug] [ThreadPool]: On list_MAIN_STAGING_test: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_test"} */
+show objects in MAIN.STAGING_test
+    limit 10000
+    
+;
+[0m00:09:07.338413 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.065 seconds
+[0m00:09:07.341552 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_test"
+[0m00:09:07.342270 [debug] [ThreadPool]: On list_MAIN_STAGING_test: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_test"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m00:09:07.391230 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.048 seconds
+[0m00:09:07.394550 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MAIN_STAGING_test, now list_MAIN_STAGING)
+[0m00:09:07.400359 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING"
+[0m00:09:07.402001 [debug] [ThreadPool]: On list_MAIN_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m00:09:07.402687 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:09:07.772568 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.370 seconds
+[0m00:09:07.775807 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING"
+[0m00:09:07.776517 [debug] [ThreadPool]: On list_MAIN_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING"} */
+show objects in MAIN.STAGING
+    limit 10000
+    
+;
+[0m00:09:07.861038 [debug] [ThreadPool]: SQL status: SUCCESS 13 in 0.084 seconds
+[0m00:09:07.864567 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING"
+[0m00:09:07.865384 [debug] [ThreadPool]: On list_MAIN_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m00:09:07.922104 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.056 seconds
+[0m00:09:07.925632 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MAIN_STAGING, now list_MAIN_STAGING__)
+[0m00:09:07.940247 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING__"
+[0m00:09:07.941083 [debug] [ThreadPool]: On list_MAIN_STAGING__: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING__"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m00:09:07.941906 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:09:08.325733 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.384 seconds
+[0m00:09:08.328928 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING__"
+[0m00:09:08.329643 [debug] [ThreadPool]: On list_MAIN_STAGING__: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING__"} */
+show objects in MAIN.STAGING__
+    limit 10000
+    
+;
+[0m00:09:08.399228 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.069 seconds
+[0m00:09:08.402392 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING__"
+[0m00:09:08.403126 [debug] [ThreadPool]: On list_MAIN_STAGING__: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING__"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m00:09:08.451631 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.047 seconds
+[0m00:09:08.453745 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MAIN_STAGING__, now list_MAIN_STAGING_Staging)
+[0m00:09:08.460723 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_Staging"
+[0m00:09:08.461461 [debug] [ThreadPool]: On list_MAIN_STAGING_Staging: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_Staging"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m00:09:08.463148 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:09:08.860249 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.398 seconds
+[0m00:09:08.863607 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_Staging"
+[0m00:09:08.864395 [debug] [ThreadPool]: On list_MAIN_STAGING_Staging: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_Staging"} */
+show objects in MAIN.STAGING_Staging
+    limit 10000
+    
+;
+[0m00:09:08.941393 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.076 seconds
+[0m00:09:08.944867 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_Staging"
+[0m00:09:08.945609 [debug] [ThreadPool]: On list_MAIN_STAGING_Staging: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_Staging"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m00:09:08.990675 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.044 seconds
+[0m00:09:08.993976 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MAIN_STAGING_Staging, now list_MAIN_STAGING_STAGING)
+[0m00:09:09.003036 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_STAGING"
+[0m00:09:09.003805 [debug] [ThreadPool]: On list_MAIN_STAGING_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_STAGING"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m00:09:09.005449 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:09:09.367313 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.363 seconds
+[0m00:09:09.369318 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_STAGING"
+[0m00:09:09.371050 [debug] [ThreadPool]: On list_MAIN_STAGING_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_STAGING"} */
+show objects in MAIN.STAGING_STAGING
+    limit 10000
+    
+;
+[0m00:09:09.441480 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.070 seconds
+[0m00:09:09.444762 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING_STAGING"
+[0m00:09:09.445516 [debug] [ThreadPool]: On list_MAIN_STAGING_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING_STAGING"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m00:09:09.494997 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.049 seconds
+[0m00:09:09.507984 [debug] [Thread-2 (]: Began running node model.Snowflake_DBT_Integration.MacroTest
+[0m00:09:09.510024 [info ] [Thread-2 (]: 1 of 1 START sql table model STAGING.MacroTest ................................. [RUN]
+[0m00:09:09.511006 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_MAIN_STAGING_STAGING, now model.Snowflake_DBT_Integration.MacroTest)
+[0m00:09:09.511714 [debug] [Thread-2 (]: Began compiling node model.Snowflake_DBT_Integration.MacroTest
+[0m00:09:09.525317 [debug] [Thread-2 (]: Using snowflake connection "model.Snowflake_DBT_Integration.MacroTest"
+[0m00:09:09.526179 [debug] [Thread-2 (]: On model.Snowflake_DBT_Integration.MacroTest: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "node_id": "model.Snowflake_DBT_Integration.MacroTest"} */
+SELECT COLUMN_NAME
+        FROM SNOWFLAKE_SAMPLE_DATA.INFORMATION_SCHEMA.COLUMNS
+        WHERE TABLE_SCHEMA = 'TPCDS_SF100TCL'
+          AND TABLE_NAME = 'ITEM'
+        ORDER BY ORDINAL_POSITION
+[0m00:09:09.526964 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m00:09:10.818545 [debug] [Thread-2 (]: SQL status: SUCCESS 22 in 1.291 seconds
+[0m00:09:10.822267 [debug] [Thread-2 (]: Writing injected SQL for node "model.Snowflake_DBT_Integration.MacroTest"
+[0m00:09:10.824539 [debug] [Thread-2 (]: Began executing node model.Snowflake_DBT_Integration.MacroTest
+[0m00:09:10.871586 [debug] [Thread-2 (]: Writing runtime sql for node "model.Snowflake_DBT_Integration.MacroTest"
+[0m00:09:10.874804 [debug] [Thread-2 (]: Using snowflake connection "model.Snowflake_DBT_Integration.MacroTest"
+[0m00:09:10.875646 [debug] [Thread-2 (]: On model.Snowflake_DBT_Integration.MacroTest: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "node_id": "model.Snowflake_DBT_Integration.MacroTest"} */
+create or replace transient table MAIN.STAGING.MacroTest
+         as
+        (select NULLIF(TRIM("I_ITEM_SK")) AS I_ITEM_SK, NULLIF(TRIM("I_ITEM_ID")) AS I_ITEM_ID, NULLIF(TRIM("I_REC_START_DATE")) AS I_REC_START_DATE, NULLIF(TRIM("I_REC_END_DATE")) AS I_REC_END_DATE, NULLIF(TRIM("I_ITEM_DESC")) AS I_ITEM_DESC, NULLIF(TRIM("I_CURRENT_PRICE")) AS I_CURRENT_PRICE, NULLIF(TRIM("I_WHOLESALE_COST")) AS I_WHOLESALE_COST, NULLIF(TRIM("I_BRAND_ID")) AS I_BRAND_ID, NULLIF(TRIM("I_BRAND")) AS I_BRAND, NULLIF(TRIM("I_CLASS_ID")) AS I_CLASS_ID, NULLIF(TRIM("I_CLASS")) AS I_CLASS, NULLIF(TRIM("I_CATEGORY_ID")) AS I_CATEGORY_ID, NULLIF(TRIM("I_CATEGORY")) AS I_CATEGORY, NULLIF(TRIM("I_MANUFACT_ID")) AS I_MANUFACT_ID, NULLIF(TRIM("I_MANUFACT")) AS I_MANUFACT, NULLIF(TRIM("I_SIZE")) AS I_SIZE, NULLIF(TRIM("I_FORMULATION")) AS I_FORMULATION, NULLIF(TRIM("I_COLOR")) AS I_COLOR, NULLIF(TRIM("I_UNITS")) AS I_UNITS, NULLIF(TRIM("I_CONTAINER")) AS I_CONTAINER, NULLIF(TRIM("I_MANAGER_ID")) AS I_MANAGER_ID, NULLIF(TRIM("I_PRODUCT_NAME")) AS I_PRODUCT_NAME
+        );
+[0m00:09:10.951828 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01bfbe4d-0001-66bb-000c-5a160003e02a
+[0m00:09:10.952648 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 3 at position 28
+invalid identifier 'I_ITEM_SK'
+[0m00:09:10.959191 [debug] [Thread-2 (]: Database Error in model MacroTest (models/MacroTest.sql)
+  000904 (42000): SQL compilation error: error line 3 at position 28
+  invalid identifier 'I_ITEM_SK'
+  compiled code at /tmp/dbt/target/run/Snowflake_DBT_Integration/models/MacroTest.sql
+[0m00:09:10.963575 [error] [Thread-2 (]: 1 of 1 ERROR creating sql table model STAGING.MacroTest ........................ [[31mERROR[0m in 1.45s]
+[0m00:09:10.964719 [debug] [Thread-2 (]: Finished running node model.Snowflake_DBT_Integration.MacroTest
+[0m00:09:10.966793 [debug] [Thread-5 (]: Marking all children of 'model.Snowflake_DBT_Integration.MacroTest' to be skipped because of status 'error'.  Reason: Database Error in model MacroTest (models/MacroTest.sql)
+  000904 (42000): SQL compilation error: error line 3 at position 28
+  invalid identifier 'I_ITEM_SK'
+  compiled code at /tmp/dbt/target/run/Snowflake_DBT_Integration/models/MacroTest.sql.
+[0m00:09:10.971630 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m00:09:10.972337 [debug] [Dummy-1   ]: Connection 'model.Snowflake_DBT_Integration.MacroTest' was properly closed.
+[0m00:09:10.972978 [info ] [Dummy-1   ]: 
+[0m00:09:10.974770 [info ] [Dummy-1   ]: Finished running 1 table model in 0 hours 0 minutes and 4.73 seconds (4.73s).
+[0m00:09:10.975908 [debug] [Dummy-1   ]: Command end result
+[0m00:09:11.017195 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m00:09:11.020720 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m00:09:11.029284 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m00:09:11.029985 [info ] [Dummy-1   ]: 
+[0m00:09:11.030863 [info ] [Dummy-1   ]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m00:09:11.032671 [info ] [Dummy-1   ]: 
+[0m00:09:11.033538 [error] [Dummy-1   ]:   Database Error in model MacroTest (models/MacroTest.sql)
+  000904 (42000): SQL compilation error: error line 3 at position 28
+  invalid identifier 'I_ITEM_SK'
+  compiled code at /tmp/dbt/target/run/Snowflake_DBT_Integration/models/MacroTest.sql
+[0m00:09:11.034252 [info ] [Dummy-1   ]: 
+[0m00:09:11.036067 [info ] [Dummy-1   ]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m00:09:11.038462 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 7.6805124, "process_in_blocks": "0", "process_kernel_time": 1.19, "process_mem_max_rss": "487780", "process_out_blocks": "0", "process_user_time": 7.78}
+[0m00:09:11.040343 [debug] [Dummy-1   ]: Command `cli run` failed at 00:09:11.040026 after 7.68 seconds
+[0m00:09:11.041073 [debug] [Dummy-1   ]: Flushing usage events
