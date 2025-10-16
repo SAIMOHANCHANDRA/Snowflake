@@ -18,13 +18,6 @@
 
     {% if not src_result or not tgt_result %}
         {% do log("One of the tables does not exist or has no columns.", info=true) %}
-        {% do return({
-            'source_table': src_db ~ '.' ~ src_schema ~ '.' ~ src_table,
-            'target_table': tgt_db ~ '.' ~ tgt_schema ~ '.' ~ tgt_table,
-            'added': [], 
-            'deleted': [], 
-            'datatype_changed': []
-        }) %}
     {% endif %}
 
     {# Step 3: Build dictionaries for easy lookup #}
@@ -44,18 +37,14 @@
     {# Step 5: Compare source vs target for added & datatype mismatches #}
     {% for col, dtype in src_dict.items() %}
         {% if col not in tgt_dict %}
-            {% do result.append("{" ~ '"' ~ col ~ '":["' ~ dtype ~ '","ADDED"]}') %}
-        {#% elif tgt_dict[col] != dtype %}
-            {% do result.append({
-                col,dtype,'Updated',tgt_dict[col]
-            }) %#}
+            {% do result.append('{" ~ '"' ~ col ~ '":["' ~ dtype ~ '","ADD"]}') %}
         {% endif %}
     {% endfor %}
 
     {# Step 6: Detect deleted columns #}
     {% for col, dtype in tgt_dict.items() %}
         {% if col not in src_dict %}
-            {% do result.append("{" ~ '"' ~ col ~ '":["' ~ dtype ~ '","DELETED"]}') %}
+            {% do result.append('{" ~ '"' ~ col ~ '":["' ~ dtype ~ '","DELETED"]}') %}
         {% endif %}
     {% endfor %}
 
@@ -66,9 +55,8 @@
       ,"result":  result | tojson
     }
     %}
-    
-    {{ return(final_result) }}
 
     {# Step 9: Return dictionary to caller #}
-    {% do return(final_result) %}
+    {% do return(Finalresult) %}
+    
 {% endmacro %}
