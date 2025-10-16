@@ -1,0 +1,1 @@
+{{ table_columns_sync('ID', 'HIREDATE', 'MAIN', 'PUBLIC', 'EMPLOYEEDETAILS', 'MAIN', 'PUBLIC', 'EMPLOYEE_DETAILS4') }}
