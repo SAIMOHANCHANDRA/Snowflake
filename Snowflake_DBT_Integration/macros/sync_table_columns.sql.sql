@@ -20,4 +20,4 @@
  
     {% do run_query(call_stmt) %}
  
-{% endmacro %
+{% endmacro %}
