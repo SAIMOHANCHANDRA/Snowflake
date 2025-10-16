@@ -63,7 +63,7 @@
     {% set final_result = 
     {
       "target_table": "{{ tgt_db }}.{{ tgt_schema }}.{{ tgt_table }}"
-      ,"result": {{ result | tojson }}
+      ,"result":  result | tojson
     }
     %}
     
