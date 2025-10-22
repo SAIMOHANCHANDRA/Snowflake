@@ -6978,3 +6978,138 @@ MANAGE_TABLE_COLUMNS line: 47
 [0m00:56:12.196504 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 6.141066, "process_in_blocks": "0", "process_kernel_time": 1.19, "process_mem_max_rss": "429852", "process_out_blocks": "0", "process_user_time": 7.27}
 [0m00:56:12.197423 [debug] [Dummy-1   ]: Command `cli run` failed at 00:56:12.197081 after 6.14 seconds
 [0m00:56:12.198167 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 07:35:16.241273 | a9c516c2-83a7-4a95-96e0-d5dabc3bb159 ==============================
+[0m07:35:16.241273 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m07:35:16.242598 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt ', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m07:35:16.658542 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m07:35:17.838193 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m07:35:18.168613 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 2 files added, 1 files changed.
+[0m07:35:18.169755 [debug] [Dummy-1   ]: Partial parsing: added file: Snowflake_DBT_Integration://models/CALL_sync_table_columns copy.sql
+[0m07:35:18.171582 [debug] [Dummy-1   ]: Partial parsing: added file: Snowflake_DBT_Integration://macros/sync_table_columns copy.sql
+[0m07:35:18.172412 [debug] [Dummy-1   ]: Partial parsing: updated file: Snowflake_DBT_Integration://models/CALL_sync_table_columns.sql
+[0m07:35:18.680688 [info ] [Dummy-1   ]: One of the tables does not exist or has no columns.
+[0m07:35:18.683858 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error in model CALL_sync_table_columns copy (models/CALL_sync_table_columns copy.sql)
+  the JSON object must be str, bytes or bytearray, not dict
+[0m07:35:18.687433 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.5520709, "process_in_blocks": "0", "process_kernel_time": 1.02, "process_mem_max_rss": "445992", "process_out_blocks": "0", "process_user_time": 6.65}
+[0m07:35:18.688349 [debug] [Dummy-1   ]: Command `cli run` failed at 07:35:18.687995 after 2.55 seconds
+[0m07:35:18.689209 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 07:36:37.693582 | bd1d18af-d181-4a7b-aecf-44bfcd1244d9 ==============================
+[0m07:36:37.693582 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m07:36:37.695846 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'debug': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt ', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m07:36:38.109191 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m07:36:39.373323 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m07:36:39.728241 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m07:36:39.730260 [debug] [Dummy-1   ]: Partial parsing: added file: Snowflake_DBT_Integration://macros/sync_table_columns copy.sql
+[0m07:36:39.731024 [debug] [Dummy-1   ]: Partial parsing: updated file: Snowflake_DBT_Integration://models/CALL_sync_table_columns.sql
+[0m07:36:40.250782 [info ] [Dummy-1   ]: One of the tables does not exist or has no columns.
+[0m07:36:40.531168 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m07:36:40.535080 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m07:36:40.609271 [info ] [Dummy-1   ]: Found 6 models, 1 test, 24 sources, 477 macros
+[0m07:36:40.612905 [info ] [Dummy-1   ]: 
+[0m07:36:40.614842 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m07:36:40.615701 [info ] [Dummy-1   ]: 
+[0m07:36:40.616821 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m07:36:40.620201 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_MAIN'
+[0m07:36:40.865186 [debug] [ThreadPool]: Using snowflake connection "list_MAIN"
+[0m07:36:40.865922 [debug] [ThreadPool]: On list_MAIN: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN"} */
+show terse schemas in database MAIN
+    limit 10000
+[0m07:36:40.866571 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:36:41.207685 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.341 seconds
+[0m07:36:41.219659 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MAIN, now list_MAIN_STAGING)
+[0m07:36:41.238518 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING"
+[0m07:36:41.239393 [debug] [ThreadPool]: On list_MAIN_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m07:36:41.240086 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:36:41.588822 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.349 seconds
+[0m07:36:41.595886 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING"
+[0m07:36:41.596715 [debug] [ThreadPool]: On list_MAIN_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING"} */
+show objects in MAIN.STAGING
+    limit 10000
+    
+;
+[0m07:36:41.693785 [debug] [ThreadPool]: SQL status: SUCCESS 16 in 0.096 seconds
+[0m07:36:41.697570 [debug] [ThreadPool]: Using snowflake connection "list_MAIN_STAGING"
+[0m07:36:41.699392 [debug] [ThreadPool]: On list_MAIN_STAGING: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "connection_name": "list_MAIN_STAGING"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m07:36:41.747455 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.047 seconds
+[0m07:36:41.772712 [debug] [Thread-2 (]: Began running node model.Snowflake_DBT_Integration.CALL_sync_table_columns
+[0m07:36:41.773760 [info ] [Thread-2 (]: 1 of 1 START sql view model STAGING.CALL_sync_table_columns .................... [RUN]
+[0m07:36:41.774802 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_MAIN_STAGING, now model.Snowflake_DBT_Integration.CALL_sync_table_columns)
+[0m07:36:41.776791 [debug] [Thread-2 (]: Began compiling node model.Snowflake_DBT_Integration.CALL_sync_table_columns
+[0m07:36:41.788924 [debug] [Thread-2 (]: Writing injected SQL for node "model.Snowflake_DBT_Integration.CALL_sync_table_columns"
+[0m07:36:41.791267 [debug] [Thread-2 (]: Began executing node model.Snowflake_DBT_Integration.CALL_sync_table_columns
+[0m07:36:41.820829 [debug] [Thread-2 (]: Using snowflake connection "model.Snowflake_DBT_Integration.CALL_sync_table_columns"
+[0m07:36:41.823445 [debug] [Thread-2 (]: On model.Snowflake_DBT_Integration.CALL_sync_table_columns: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "node_id": "model.Snowflake_DBT_Integration.CALL_sync_table_columns"} */
+SELECT COLUMN_NAME, DATA_TYPE
+        FROM MAIN.INFORMATION_SCHEMA.COLUMNS
+        WHERE TABLE_SCHEMA = 'PUBLIC' AND TABLE_NAME = 'EMPLOYEEDETAILS'
+[0m07:36:41.825909 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m07:36:42.882363 [debug] [Thread-2 (]: SQL status: SUCCESS 8 in 1.057 seconds
+[0m07:36:42.887982 [debug] [Thread-2 (]: Using snowflake connection "model.Snowflake_DBT_Integration.CALL_sync_table_columns"
+[0m07:36:42.889234 [debug] [Thread-2 (]: On model.Snowflake_DBT_Integration.CALL_sync_table_columns: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "node_id": "model.Snowflake_DBT_Integration.CALL_sync_table_columns"} */
+SELECT COLUMN_NAME, DATA_TYPE
+        FROM MAIN.INFORMATION_SCHEMA.COLUMNS
+        WHERE TABLE_SCHEMA = 'PUBLIC' AND TABLE_NAME = 'EMPLOYEE_DETAILS4'
+[0m07:36:43.700284 [debug] [Thread-2 (]: SQL status: SUCCESS 7 in 0.808 seconds
+[0m07:36:43.704677 [debug] [Thread-2 (]: Using snowflake connection "model.Snowflake_DBT_Integration.CALL_sync_table_columns"
+[0m07:36:43.706661 [debug] [Thread-2 (]: On model.Snowflake_DBT_Integration.CALL_sync_table_columns: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "node_id": "model.Snowflake_DBT_Integration.CALL_sync_table_columns"} */
+CALL MANAGE_TABLE_COLUMNS(
+ 
+            ' ',
+ 
+            ' ',
+ 
+            PARSE_JSON('{"target_table": "MAIN.PUBLIC.EMPLOYEE_DETAILS4", "result": [{"CONTACT": ["NUMBER", "ADD"]}]}')
+        );
+[0m07:36:43.996841 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.289 seconds
+[0m07:36:44.047572 [debug] [Thread-2 (]: Writing runtime sql for node "model.Snowflake_DBT_Integration.CALL_sync_table_columns"
+[0m07:36:44.050215 [debug] [Thread-2 (]: Using snowflake connection "model.Snowflake_DBT_Integration.CALL_sync_table_columns"
+[0m07:36:44.050973 [debug] [Thread-2 (]: On model.Snowflake_DBT_Integration.CALL_sync_table_columns: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "Snowflake_DBT_Integration", "target_name": "dev", "node_id": "model.Snowflake_DBT_Integration.CALL_sync_table_columns"} */
+create or replace   view MAIN.STAGING.CALL_sync_table_columns
+  
+   as (
+    
+
+select current_timestamp() as last_run_date
+  );
+[0m07:36:44.169095 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.117 seconds
+[0m07:36:44.206752 [info ] [Thread-2 (]: 1 of 1 OK created sql view model STAGING.CALL_sync_table_columns ............... [[32mSUCCESS 1[0m in 2.43s]
+[0m07:36:44.207861 [debug] [Thread-2 (]: Finished running node model.Snowflake_DBT_Integration.CALL_sync_table_columns
+[0m07:36:44.212545 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m07:36:44.214328 [debug] [Dummy-1   ]: Connection 'model.Snowflake_DBT_Integration.CALL_sync_table_columns' was properly closed.
+[0m07:36:44.215059 [info ] [Dummy-1   ]: 
+[0m07:36:44.215816 [info ] [Dummy-1   ]: Finished running 1 view model in 0 hours 0 minutes and 3.60 seconds (3.60s).
+[0m07:36:44.216930 [debug] [Dummy-1   ]: Command end result
+[0m07:36:44.256826 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m07:36:44.260470 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m07:36:44.269170 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m07:36:44.269907 [info ] [Dummy-1   ]: 
+[0m07:36:44.270796 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m07:36:44.272449 [info ] [Dummy-1   ]: 
+[0m07:36:44.273265 [info ] [Dummy-1   ]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m07:36:44.276734 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.6896973, "process_in_blocks": "0", "process_kernel_time": 1.0, "process_mem_max_rss": "491464", "process_out_blocks": "0", "process_user_time": 7.71}
+[0m07:36:44.277618 [debug] [Dummy-1   ]: Command `cli run` succeeded at 07:36:44.277290 after 6.69 seconds
+[0m07:36:44.278341 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 08:43:13.724727 | 98f5715c-5609-473e-9432-9ea23b3db590 ==============================
+[0m08:43:13.724727 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m08:43:13.727038 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m08:43:14.167350 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m08:43:15.467361 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m08:43:15.816096 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m08:43:15.817271 [debug] [Dummy-1   ]: Partial parsing: added file: Snowflake_DBT_Integration://models/CALL_sync_table_columns_copy.sql
+[0m08:43:15.818122 [debug] [Dummy-1   ]: Partial parsing: updated file: Snowflake_DBT_Integration://models/CALL_sync_table_columns.sql
+[0m08:43:16.339515 [info ] [Dummy-1   ]: One of the tables does not exist or has no columns.
+[0m08:43:16.342998 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error in model CALL_sync_table_columns_copy (models/CALL_sync_table_columns_copy.sql)
+  the JSON object must be str, bytes or bytearray, not dict
+[0m08:43:16.346956 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.7313793, "process_in_blocks": "0", "process_kernel_time": 1.08, "process_mem_max_rss": "453696", "process_out_blocks": "0", "process_user_time": 7.14}
+[0m08:43:16.347959 [debug] [Dummy-1   ]: Command `cli run` failed at 08:43:16.347591 after 2.73 seconds
+[0m08:43:16.348816 [debug] [Dummy-1   ]: Flushing usage events
