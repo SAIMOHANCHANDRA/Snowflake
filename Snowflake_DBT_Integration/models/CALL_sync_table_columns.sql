@@ -1,7 +1,6 @@
-
 {{ config(
     materialized='view',
-    pre_hook = "{{ table_columns_sync_copy('ID', 'HIREDATE', 'MAIN', 'PUBLIC', 'EMPLOYEEDETAILS', 'MAIN', 'PUBLIC', 'EMPLOYEE_DETAILS4') }}"
+    pre_hook = "{{ sync_table_schema('MAIN', 'PUBLIC', 'EMPLOYEEDETAILS', 'MAIN', 'PUBLIC', 'EMPLOYEE_DETAILS4','ID','HIREDATE') }}"
 ) }}
 
 select current_timestamp() as last_run_date
