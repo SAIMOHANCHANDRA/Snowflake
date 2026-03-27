@@ -36,3 +36,9 @@ sources:
     schema: default
     tables:
       - name : customer_history
+
+  - name : source2
+    database: MAIN
+    schema: EDW
+    tables:
+      - name : customer_history

@@ -8,3 +8,58 @@ snapshots:
       strategy: timestamp
       updated_at: UPDATED_AT
       dbt_valid_to_current: "to_date('9999-12-31')"
+  - name: snapshot2
+    relation: ref('customer')
+    config:
+      database: MAIN
+      schema: test
+      unique_key: CUSTOMERID
+      strategy: timestamp
+      updated_at: UPDATED_AT
+      dbt_valid_to_current: "to_date('9999-12-31')"
+  - name: snapshot3
+    relation: ref('customer')
+    config:
+      database: MAIN
+      schema: STAGING
+      unique_key: CUSTOMERID
+      strategy: timestamp
+      updated_at: UPDATED_AT
+      dbt_valid_to_current: "to_date('9999-12-31')"
+  - name: snapshot4
+    relation: ref('customer')
+    config:
+      database: MAIN
+      schema: STAGING
+      unique_key: CUSTOMERID
+      strategy: timestamp
+      updated_at: UPDATED_AT
+      dbt_valid_to_current: "to_date('9999-12-31')"
+  - name: snapshot5
+    relation: ref('customer')
+    config:
+      database: MAIN
+      unique_key: CUSTOMERID
+      strategy: timestamp
+      updated_at: UPDATED_AT
+      dbt_valid_to_current: "to_date('9999-12-31')"
+  - name: snapshot7
+    relation: ref('customer')
+    config:
+      database: MAIN
+      schema: _
+      unique_key: CUSTOMERID
+      strategy: timestamp
+      updated_at: UPDATED_AT
+      dbt_valid_to_current: "to_date('9999-12-31')"
+
+  - name: snapshot8
+    relation: ref('customer')
+    config:
+      database: MAIN
+      schema:
+      unique_key: CUSTOMERID
+      strategy: timestamp
+      updated_at: UPDATED_AT
+      dbt_valid_to_current: "to_date('9999-12-31')"
+  - name: CheckStrategy
